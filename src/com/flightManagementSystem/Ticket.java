@@ -7,7 +7,7 @@ public class Ticket {
 	private int allowedCarrions;
 	private boolean isFoodReserved;
 	
-	public Ticket(Passenger passenger, Seat seat, Flight flight, int allowedCarrions, boolean isFoodReserved) {
+	public Ticket(Passenger passenger, Seat seat, Flight flight, int allowedCarrions, boolean isFoodReserved, int id) {
 		this.passenger = passenger;
 		this.seat = seat;
 		this.flight = flight;
