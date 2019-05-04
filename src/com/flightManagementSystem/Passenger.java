@@ -31,7 +31,7 @@ public class Passenger {
 
 	public void buyTicket(Seat s, Flight f, int allowedCarrions, boolean isFoodResereved) {
 		if (!s.isReserved()) {
-			tickets.add(new Ticket(this, s, f, allowedCarrions, isFoodResereved));
+			tickets.add(new Ticket(this, s, f, allowedCarrions, isFoodResereved, FlightSystem.genTicketId()));
 			f.getPlane().reserveSeat(s);
 		} else
 			System.out.println("ERROR: Seat is already reserved.");

@@ -6,6 +6,7 @@ public class Ticket {
 	private Flight flight;
 	private int allowedCarrions;
 	private boolean isFoodReserved;
+	private int id;
 	
 	public Ticket(Passenger passenger, Seat seat, Flight flight, int allowedCarrions, boolean isFoodReserved, int id) {
 		this.passenger = passenger;
@@ -13,6 +14,7 @@ public class Ticket {
 		this.flight = flight;
 		this.allowedCarrions = allowedCarrions;
 		this.isFoodReserved = isFoodReserved;
+		this.id = id;
 	}
 	
 	public Seat getSeat() {
@@ -33,6 +35,10 @@ public class Ticket {
 	
 	public boolean isFoodReserved() {
 		return this.isFoodReserved;
+	}
+
+	public int getId() {
+		return id;
 	}
 
 	@Override

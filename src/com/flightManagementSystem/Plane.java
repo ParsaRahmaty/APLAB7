@@ -1,7 +1,7 @@
 package com.flightManagementSystem;
 
 public class Plane {
-	private int id = 0;
+	private int id;
 	private String co;
 	private String planeType;
 	private Seat[] seats;
