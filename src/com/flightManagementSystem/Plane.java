@@ -11,6 +11,8 @@ public class Plane {
 		this.co = co;
 		this.planeType = planeType;
 		seats = new Seat[numberOfSeats];
+		for (int i = 1; i <= numberOfSeats; i++)
+			seats[i - 1] = new Seat(i, false, "economic");
 	}
 	
 	public String getCo() {
@@ -39,6 +41,13 @@ public class Plane {
 	
 	public int getId() {
 		return id;
+	}
+
+	public Seat getSeat(int seatNumber) {
+		if (1 <= seatNumber && seatNumber <= seats.length)
+			return seats[seatNumber - 1];
+		else
+			return null;
 	}
 	
 	public void reserveSeat(Seat s) {
