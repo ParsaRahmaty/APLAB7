@@ -34,7 +34,7 @@ public class DateAndTime {
 	public int getMinute() {
 		return this.minute;
 	}
-	
+
 	@Override
 	public String toString() {
 		String output = "";

@@ -20,11 +20,15 @@ public class FlightTest {
     public void allocateMemory() {
         plane = new Plane(1, "Mahan", "jet", 500);
         dateAndTime = new DateAndTime(2019, 6, 25, 21, 15);
-        flight = new Flight(1, dateAndTime, "Frankfurt", "Tehran", plane);
+        flight = new Flight(11, dateAndTime, "Frankfurt", "Tehran", plane);
     }
 
     @Test
     public void flightMethodsTest() {
-        
+        assertEquals(11, flight.getId());
+        assertEquals(dateAndTime, flight.getDateAndTime());
+        assertEquals("Frankfurt", flight.getDest());
+        assertEquals("Tehran", flight.getCity());
+        assertEquals(plane, flight.getPlane());
     }
 }
